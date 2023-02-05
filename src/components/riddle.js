@@ -3,7 +3,7 @@ import { riddles } from "../constants/riddles";
 import "./riddle.css";
 
 function Riddle({ riddleNumber, selectedOptions, setSelectedOptions }) {
-  const { question, options, correctAnswer } = riddles[riddleNumber];
+  const { question, options } = riddles[riddleNumber];
   return (
     <div className="riddle-container">
       <h2>
