@@ -1,8 +1,35 @@
+.outer-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.outer-container.dark-mode {
+  background-color: #141d2f;
+  color: #fff;
+}
+
+.container.dark-mode {
+  background-color: #1e2a47;
+}
+
 .container {
   width: 80rem;
-  margin: auto;
   border: 2px solid #eee;
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.toggle:hover {
+  cursor: pointer;
 }
 
 h1 {
