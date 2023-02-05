@@ -1,0 +1,52 @@
+.analytics {
+  list-style: none;
+  padding: 2.4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.6rem;
+  justify-content: center;
+  border: 2px solid #eee;
+}
+
+.comparison {
+  padding: 1.2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.4rem;
+}
+
+.comparison ul {
+  list-style: none;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+ul li + li {
+  margin-top: 0.2rem;
+}
+
+h3 {
+  color: var(--primary-color);
+  font-size: 2rem;
+}
+
+.wrongAns {
+  background-color: #aa4a44;
+  color: white;
+}
+
+@media (max-width: 32.5rem) {
+  .comparison {
+    gap: 1rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  .comparison ul {
+    font-size: 1.4rem;
+  }
+}

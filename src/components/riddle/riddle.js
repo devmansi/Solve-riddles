@@ -1,5 +1,5 @@
 import React from "react";
-import { riddles } from "../constants/riddles";
+import { riddles } from "../../constants/riddles";
 import "./riddle.css";
 
 function Riddle({ riddleNumber, selectedOptions, setSelectedOptions }) {

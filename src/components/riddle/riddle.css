@@ -16,6 +16,10 @@ h2 {
   font-size: 1.6rem;
 }
 
+.option *:hover {
+  cursor: pointer;
+}
+
 .option + .option {
   margin-top: 0.8rem;
 }
