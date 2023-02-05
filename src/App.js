@@ -25,6 +25,8 @@ function App() {
   };
 
   const correctAnswers = submitBtnClicked && findCorrectAnswers();
+  const percentageScored =
+    submitBtnClicked && (correctAnswers / riddles.length) * 100;
 
   function submit() {
     setSubmitBtnClicked(true);
@@ -90,7 +92,11 @@ function App() {
                 <li>Riddles correctly answered - {correctAnswers}</li>
                 <li>
                   Your score -
-                  {((correctAnswers / riddles.length) * 100).toFixed(0)}%
+                  {`${percentageScored.toFixed(0)}% ${
+                    (percentageScored === 100 && "😃") ||
+                    (percentageScored === 0 && "😞") ||
+                    ""
+                  }`}{" "}
                 </li>
               </ul>
             </div>
