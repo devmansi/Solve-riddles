@@ -18,6 +18,7 @@ function Result({ answers }) {
   const yourAnswers = [];
   const correctAnswersArray = [];
   const wrongAnswers = [];
+  const correctAnswersOfGivenWrongAns = [];
   let n = 1;
 
   for (let i = 0; i < answers.length; i++) {
@@ -25,6 +26,7 @@ function Result({ answers }) {
     correctAnswersArray.push(riddles[i].correctAnswer);
     if (answers[i][n] !== riddles[i].correctAnswer) {
       wrongAnswers.push(answers[i][n]);
+      correctAnswersOfGivenWrongAns.push(riddles[i].correctAnswer);
     }
     n += 1;
   }
@@ -63,7 +65,15 @@ function Result({ answers }) {
             <h3>Correct answers</h3>
             <ul>
               {correctAnswersArray.map((answer) => (
-                <li>{answer}</li>
+                <li
+                  className={
+                    correctAnswersOfGivenWrongAns.includes(answer)
+                      ? "correctAns"
+                      : ""
+                  }
+                >
+                  {answer}
+                </li>
               ))}
             </ul>
           </div>

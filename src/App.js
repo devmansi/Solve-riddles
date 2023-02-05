@@ -32,7 +32,7 @@ function App() {
                 selectedOptions={selectedOptions}
                 setSelectedOptions={setSelectedOptions}
               />
-              <Review answers={answers} />
+              {answers.length > 0 && <Review answers={answers} />}
               {Object.keys(selectedOptions).length === riddles.length && (
                 <div className="submit">
                   <button className="submit-btn" onClick={submit}>
